@@ -1,3 +1,7 @@
+## Live Demo
+
+https://bidsense-ai-q1rx.vercel.app/
+
 # BidSense AI
 
 BidSense AI is an intelligent tender evaluation system that automates vendor bid analysis using AI-assisted scoring techniques.
