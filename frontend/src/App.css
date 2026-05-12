@@ -4,7 +4,9 @@ body {
   background: #f4f6fb;
 }
 
-/* HEADER */
+/* =====================================================
+   HEADER
+===================================================== */
 
 .header {
   background: #21409a;
@@ -15,13 +17,23 @@ body {
   align-items: center;
 }
 
-.header a {
+.nav-btn {
+  background: transparent;
+  border: none;
   color: white;
   margin-left: 20px;
-  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
-/* HERO */
+.nav-btn:hover {
+  opacity: 0.8;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero {
   background: linear-gradient(135deg, #1f49c0, #21409a);
@@ -30,11 +42,30 @@ body {
   text-align: center;
 }
 
-/* DASHBOARD */
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
 
 .dashboard {
   padding: 50px 80px;
 }
+
+.dashboard h3 {
+  margin-bottom: 30px;
+}
+
+/* =====================================================
+   UPLOAD SECTION
+===================================================== */
 
 .upload-grid {
   display: grid;
@@ -47,9 +78,16 @@ body {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
 }
 
-/* BUTTON */
+.upload-card:hover {
+  transform: translateY(-4px);
+}
+
+/* =====================================================
+   BUTTON
+===================================================== */
 
 .analyze-btn {
   margin-top: 40px;
@@ -60,9 +98,55 @@ body {
   border-radius: 30px;
   cursor: pointer;
   font-size: 16px;
+  transition: all 0.3s ease;
 }
 
-/* RESULTS TABLE */
+.analyze-btn:hover {
+  background: #16337c;
+}
+
+.analyze-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.loading-text {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* =====================================================
+   SUMMARY CARDS
+===================================================== */
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.summary-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.summary-card h4 {
+  margin-bottom: 10px;
+  color: #21409a;
+}
+
+.summary-card p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* =====================================================
+   RESULTS TABLE
+===================================================== */
 
 .results {
   width: 100%;
@@ -82,12 +166,22 @@ body {
   background: #eef2ff;
 }
 
+.results tr {
+  transition: all 0.3s ease;
+}
+
+.results tr:hover {
+  background: #f8fafc;
+}
+
 .winner-row {
   background: #dcfce7;
   font-weight: bold;
 }
 
-/* WINNER BOX */
+/* =====================================================
+   WINNER BOX
+===================================================== */
 
 .winner-box {
   margin-top: 30px;
@@ -98,26 +192,18 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* ERROR */
+/* =====================================================
+   ERROR
+===================================================== */
 
 .error {
   color: red;
   margin-top: 20px;
 }
 
-/* LOADING */
-
-.loading-text {
-  font-weight: bold;
-  letter-spacing: 0.5px;
-}
-
-.analyze-btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-
-/* RISK BADGES */
+/* =====================================================
+   RISK BADGES
+===================================================== */
 
 .risk-low,
 .risk-medium,
@@ -145,27 +231,9 @@ body {
   color: #721c24;
 }
 
-/* HOVER EFFECTS */
-
-.upload-card,
-.results tr,
-.analyze-btn {
-  transition: all 0.3s ease;
-}
-
-.upload-card:hover {
-  transform: translateY(-4px);
-}
-
-.analyze-btn:hover {
-  background: #16337c;
-}
-
-.results tr:hover {
-  background: #f8fafc;
-}
-
-/* RESPONSIVE DESIGN */
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
 
 @media (max-width: 768px) {
 
@@ -180,6 +248,10 @@ body {
     padding: 50px 20px;
   }
 
+  .hero h2 {
+    font-size: 30px;
+  }
+
   .dashboard {
     padding: 30px 20px;
   }
@@ -188,43 +260,14 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
   .results {
     font-size: 12px;
     overflow-x: auto;
     display: block;
-  }
-
-}
-
-.summary-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 40px;
-}
-
-.summary-card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  text-align: center;
-}
-
-.summary-card h4 {
-  margin-bottom: 10px;
-  color: #21409a;
-}
-
-.summary-card p {
-  font-size: 22px;
-  font-weight: bold;
-}
-
-@media (max-width: 768px) {
-
-  .summary-grid {
-    grid-template-columns: 1fr;
   }
 
 }

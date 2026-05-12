@@ -4,9 +4,9 @@ function Header() {
       <h1>BidSense AI</h1>
 
       <nav>
-        <a href="#">Features</a>
-        <a href="#">How It Works</a>
-        <a href="#">Contact</a>
+        <button className="nav-btn">Features</button>
+        <button className="nav-btn">How It Works</button>
+        <button className="nav-btn">Contact</button>
       </nav>
     </header>
   );
