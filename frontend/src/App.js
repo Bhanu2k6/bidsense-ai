@@ -41,7 +41,7 @@ function App() {
       });
 
       const res = await fetch(
-        "http://127.0.0.1:8000/analyze",
+        "https://bidsense-ai-backend-9jfg.onrender.com/analyze",
         {
           method: "POST",
           body: formData,
